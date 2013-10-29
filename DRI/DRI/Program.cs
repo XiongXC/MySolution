@@ -10,7 +10,8 @@ namespace DRI
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(3/2);
+            Console.ReadKey();
         }
     }
 }

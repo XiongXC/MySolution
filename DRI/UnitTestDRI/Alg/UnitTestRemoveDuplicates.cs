@@ -64,6 +64,8 @@ namespace UnitTestDRI.Alg
         {
             int[] b = {1,2,5,2,4,5,3,4,6,5,7,1,3,3,3 };
             int[] c = {1,2,5,4,3,6,7};
+            //int[] b = {1};
+            //int[] c = {1};
             int[] a = RemoveDuplicatesInArray.RemoveDuplicates(b);
 
             for (int i = 0; i < c.Length; i++)

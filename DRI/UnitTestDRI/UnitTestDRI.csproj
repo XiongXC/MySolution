@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Alg\UnitTestQuickFIndUnion.cs" />
     <Compile Include="Alg\UnitTestRemoveDuplicates.cs" />
+    <Compile Include="Basics\UnitTestDivision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
