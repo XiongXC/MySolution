@@ -45,6 +45,7 @@
     <Compile Include="Alg\QuickFindUnion.cs" />
     <Compile Include="Alg\QuickFindUnionTree.cs" />
     <Compile Include="Alg\QuickFindUnionTreeBalanced.cs" />
+    <Compile Include="Alg\RemoveDuplicatesInArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

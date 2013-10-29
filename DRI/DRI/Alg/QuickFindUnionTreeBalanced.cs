@@ -20,44 +20,30 @@ namespace DRI.Alg
         }
 
         public void Connect(int p,int q) {
-            while (q != networks[q])
-            {
-                q = networks[q];
-            }
-
-            while (p != networks[p])
-            {
-                p = networks[p];
-            }
+            q = Root(q);
+            p = Root(p);
             if (size[p] < size[q])
             {
                 networks[p] = q;
-                size[q] += size[p];
-                size[p] = 1;
+                size[q] += size[p];               
             }
             else {
                 networks[q] = p;
-                size[p] += size[q];
-                size[q] = 1;
-            }
-
-            
+                size[p] += size[q];                
+            }            
         }
 
-        public bool Find(int p, int q) {
+        public bool Find(int p, int q)
+        {
             bool connected = false;
-            while(p!= networks[p])
-            {
-                p= networks[p];
-            }
-
-            while(q!= networks[q])
-            {
-                q= networks[q];
-            }
-
-            if (p == q) connected = true;
+            if (Root(p) == Root(q)) connected = true;
             return connected;
+        }
+
+        private int Root(int p)
+        {
+            while (p != networks[p]) p = networks[p];
+            return p;
         }
     }
 }
