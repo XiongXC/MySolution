@@ -53,6 +53,7 @@
     <Compile Include="Alg\UnitTestQuickFIndUnion.cs" />
     <Compile Include="Alg\UnitTestRemoveDuplicates.cs" />
     <Compile Include="Basics\UnitTestDivision.cs" />
+    <Compile Include="Int\UnitTest_Palindrome.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +62,7 @@
       <Name>DRI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

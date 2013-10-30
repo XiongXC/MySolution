@@ -50,6 +50,8 @@
     <Compile Include="Alg\QuickFindUnionTreeBalanced.cs" />
     <Compile Include="Alg\RemoveDuplicatesInArray.cs" />
     <Compile Include="Basics\JaggedArray.cs" />
+    <Compile Include="Basics\StringPro.cs" />
+    <Compile Include="Int\Palindrome.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

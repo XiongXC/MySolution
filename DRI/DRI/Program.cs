@@ -13,8 +13,8 @@ namespace DRI
         static void Main(string[] args)
         {
             //Ordinary_Array.TestArray();
-            ReverseArray180.TestReverseArray180();
-            
+            //ReverseArray180.TestReverseArray180();
+            StringPro.StringTest();
             Console.ReadKey();
         }
 
