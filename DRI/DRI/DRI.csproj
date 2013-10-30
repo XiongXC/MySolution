@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alg\ReverseArray180.cs" />
+    <Compile Include="Basics\Ordinary_Array.cs" />
     <Compile Include="Basics\Basic.cs" />
     <Compile Include="Alg\MergeSort.cs" />
     <Compile Include="Alg\QuickFindUnion.cs" />
     <Compile Include="Alg\QuickFindUnionTree.cs" />
     <Compile Include="Alg\QuickFindUnionTreeBalanced.cs" />
     <Compile Include="Alg\RemoveDuplicatesInArray.cs" />
+    <Compile Include="Basics\JaggedArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

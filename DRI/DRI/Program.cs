@@ -4,14 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DRI.Alg;
+using DRI.Basics;
+
 namespace DRI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(3/2);
+            //Ordinary_Array.TestArray();
+            ReverseArray180.TestReverseArray180();
+            
             Console.ReadKey();
         }
+
+       
     }
 }
