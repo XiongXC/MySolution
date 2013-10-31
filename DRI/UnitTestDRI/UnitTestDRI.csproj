@@ -53,6 +53,7 @@
     <Compile Include="Alg\UnitTestQuickFIndUnion.cs" />
     <Compile Include="Alg\UnitTestRemoveDuplicates.cs" />
     <Compile Include="Basics\UnitTestDivision.cs" />
+    <Compile Include="Int\UnitTest_MaxProductOfN_In_M_bits.cs" />
     <Compile Include="Int\UnitTest_Palindrome.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
