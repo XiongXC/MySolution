@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace DRI.Basics
 {
@@ -22,6 +23,7 @@ namespace DRI.Basics
 
             return a;
         }
+               
 
         public static void TestArray(int[,] a)
         {
@@ -40,7 +42,6 @@ namespace DRI.Basics
                 }
                 Console.WriteLine("");
             }
-
         }
     }
 }
