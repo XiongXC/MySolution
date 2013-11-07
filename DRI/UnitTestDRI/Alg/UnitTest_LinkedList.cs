@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DRI.Alg;
 using DRI;
+using System.Collections;
 
 namespace UnitTestDRI.Alg
 {
@@ -20,7 +21,7 @@ namespace UnitTestDRI.Alg
             }
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void Test_Add()
         {
             int[] b =new int[a.Length];
@@ -29,6 +30,26 @@ namespace UnitTestDRI.Alg
 
             while(iterator.HasNext()==true){
                 iterator=iterator.Next();
+                b[j++] = iterator.value;
+            }
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                Assert.AreEqual(a[i], b[i]);
+            }
+        }*/
+
+
+        [TestMethod]
+        public void Test_Add()
+        {
+            int[] b = new int[a.Length];
+            int j = 0;
+            IEnumerator<T> iterator = int_list.GetEnumerator();
+
+            while (iterator.HasNext() == true)
+            {
+                iterator = iterator.Next();
                 b[j++] = iterator.value;
             }
 

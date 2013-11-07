@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections;
 
 namespace DRI.Alg
 {
@@ -23,7 +23,7 @@ namespace DRI.Alg
             this.value = default(T);
         }
 
-        public bool HasNext()
+        /*public bool HasNext()
         {
             if (this.next != null) return true;
             return false;
@@ -31,9 +31,9 @@ namespace DRI.Alg
 
         public Node<T> Next() {
             return this.next;
-        }
+        }*/
     }
-    public class LinkedList<T>
+    public class LinkedList<T>:IEnumerable<T>
     {
         Node<T> head;
         public LinkedList()
@@ -85,9 +85,18 @@ namespace DRI.Alg
             else return true;            
         }
 
-        public Node<T> GetIterator() {
-            return this.head;
+        public IEnumerator<T> GetEnumerator() {
+            Node<T> current = head.next;
+            while (current != null) {
+                yield return current.value;
+                current=current.next;
+            }
         }
+
+        /*IEnumerator IEnumerable.GetEnumerator { 
+            return GetEnumerator;
+        }*/
+             
 
     }
 }
