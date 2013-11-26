@@ -41,9 +41,9 @@ namespace DRI.Alg
 
         public static void TestReverseArray180(){
           int[,] a=  Ordinary_Array.CreateArray(5, 3);
-          Ordinary_Array.TestArray(a);
+          //Ordinary_Array.TestArray(a);
           ReverseArray(a);
-          Ordinary_Array.TestArray(a);
+          //Ordinary_Array.TestArray(a);
         }
     }
 }

@@ -45,18 +45,31 @@ namespace UnitTestDRI.Alg
         {
             int[] b = new int[a.Length];
             int j = 0;
-            IEnumerator<T> iterator = int_list.GetEnumerator();
+            IEnumerator iterator = int_list.GetEnumerator();
 
-            while (iterator.HasNext() == true)
+            while (iterator.MoveNext() == true)
             {
-                iterator = iterator.Next();
-                b[j++] = iterator.value;
+                 
+                b[j++] = (int)iterator.Current;
             }
 
             for (int i = 0; i < a.Length; i++)
             {
                 Assert.AreEqual(a[i], b[i]);
             }
+        }
+
+        [TestMethod]
+        public void Test_Add1()
+        {
+            int[] b = new int[a.Length];
+            int j = 0;
+            
+            foreach (int k in int_list)
+            {
+                Assert.AreEqual(a[j++], k);
+            }
+             
         }
 
         [TestMethod]

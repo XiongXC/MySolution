@@ -3,27 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
 
-namespace DRI.Basics
+namespace Sample
 {
-    public class Ordinary_Array
+    class Program
     {
+        static void Main(string[] args)
+        {
+            //TestArray();
+            string s = "08/12/2013";
+
+            Console.WriteLine(Convert.ToDateTime(s));
+
+            Console.ReadKey();
+        }
+
         public static int[,] CreateArray(int m, int n)
         {
-            int[,] a = new int[m,n];
+            int[,] a = new int[m, n];
 
-            for (int i = 0; i < m; i++)            {
-                 
+            for (int i = 0; i < m; i++)
+            {
+
                 for (int j = 0; j < n; j++)
                 {
-                    a[i,j] = i * 13 + j;
+                    a[i, j] = i * 13 + j;
                 }
             }
 
             return a;
         }
-               
+
 
         public static void TestArray()
         {
@@ -38,7 +48,7 @@ namespace DRI.Basics
             {
                 for (int j = 0; j < a.GetLength(1); j++)
                 {
-                    Console.Write(a[i,j] + "  ");
+                    Console.Write(a[i, j] + "  ");
                 }
                 Console.WriteLine("");
             }

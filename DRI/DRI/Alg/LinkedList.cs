@@ -22,20 +22,13 @@ namespace DRI.Alg
             this.next = null;
             this.value = default(T);
         }
-
-        /*public bool HasNext()
-        {
-            if (this.next != null) return true;
-            return false;
-        }
-
-        public Node<T> Next() {
-            return this.next;
-        }*/
     }
+
+    //Implement IEnumerable interface:  only one member public IEnumerator<T> GetEnumerator()
     public class LinkedList<T>:IEnumerable<T>
     {
-        Node<T> head;
+        public Node<T> head;
+
         public LinkedList()
         {
             this.head = new Node<T>();
@@ -86,17 +79,67 @@ namespace DRI.Alg
         }
 
         public IEnumerator<T> GetEnumerator() {
-            Node<T> current = head.next;
-            while (current != null) {
-                yield return current.value;
-                current=current.next;
+            return (new LinkedListEnumerator<T>(this));
+        }
+
+        //Add this one
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    //Implement IEnumerator Interface:    3 members:    Reset(), Current, MoveNext()
+    public class LinkedListEnumerator<T> : IEnumerator<T>
+    {
+        public LinkedList<T> linkedList;
+        public Node<T> currentNode;
+
+        public T Current
+        {
+            get
+            {
+                return currentNode.value;              
             }
         }
 
-        /*IEnumerator IEnumerable.GetEnumerator { 
-            return GetEnumerator;
-        }*/
-             
 
+        #region IEnumerator Members
+
+        //Sets the enumerator to its initial position, which is before the first element in the collection.” 
+        //With a 0 based index, the position just before the first element is -1
+        public void Reset() {
+            currentNode = linkedList.head;
+        }
+
+        //gets the current element in the collection.
+        object System.Collections.IEnumerator.Current { get { return Current; } }
+
+        //Advances the enumerator to the next element of the collection.”
+        //It is also important to note, that it returns a bool. 
+        //“true if the enumerator was successfully advanced to the next element; 
+        //false if the enumerator has passed the end of the collection
+        public bool MoveNext(){
+            if (currentNode.next != null) {
+                currentNode = currentNode.next;
+                return true; 
+            }
+            return false;
+        }
+
+        public void Dispose()
+        {
+           
+        }
+
+        #endregion  
+        
+        internal LinkedListEnumerator(LinkedList<T> linkedList) {
+            this.linkedList = linkedList;
+            this.currentNode = linkedList.head;
+            //Reset();
+        }
     }
+
+
 }
