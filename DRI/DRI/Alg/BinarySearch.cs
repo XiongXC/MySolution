@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DRI.Alg
 {
-    class BinarySearch
+    public class BinarySearch
     {
         public static int binarySearch(int[] a, int key)
         {
