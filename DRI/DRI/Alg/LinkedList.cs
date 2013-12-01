@@ -94,7 +94,8 @@ namespace DRI.Alg
     {
         public LinkedList<T> linkedList;
         public Node<T> currentNode;
-
+        
+        //Must implement this one
         public T Current
         {
             get
@@ -127,6 +128,7 @@ namespace DRI.Alg
             return false;
         }
 
+        //Must have 
         public void Dispose()
         {
            
@@ -140,6 +142,5 @@ namespace DRI.Alg
             //Reset();
         }
     }
-
 
 }

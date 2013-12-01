@@ -44,7 +44,9 @@
     <Compile Include="Alg\BinarySearch.cs" />
     <Compile Include="Alg\BinarySearch2.cs" />
     <Compile Include="Alg\LinkedList.cs" />
+    <Compile Include="Alg\Queue.cs" />
     <Compile Include="Alg\ReverseArray180.cs" />
+    <Compile Include="Alg\Stack.cs" />
     <Compile Include="Basics\Ordinary_Array.cs" />
     <Compile Include="Basics\Basic.cs" />
     <Compile Include="Alg\MergeSort.cs" />

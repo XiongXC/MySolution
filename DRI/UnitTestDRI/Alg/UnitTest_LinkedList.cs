@@ -68,8 +68,7 @@ namespace UnitTestDRI.Alg
             foreach (int k in int_list)
             {
                 Assert.AreEqual(a[j++], k);
-            }
-             
+            }             
         }
 
         [TestMethod]
@@ -80,7 +79,6 @@ namespace UnitTestDRI.Alg
 
             list = int_list;
             Assert.IsTrue(list.Remove(a[5]));
-
         }
 
         [TestMethod]
@@ -91,7 +89,6 @@ namespace UnitTestDRI.Alg
 
             list = int_list;
             Assert.IsTrue(list.Find(a[5]));
-
         }
     }
 }
