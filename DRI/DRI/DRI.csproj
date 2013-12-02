@@ -56,8 +56,10 @@
     <Compile Include="Alg\RemoveDuplicatesInArray.cs" />
     <Compile Include="Basics\JaggedArray.cs" />
     <Compile Include="Basics\StringPro.cs" />
+    <Compile Include="Int\BinarySearch.cs" />
     <Compile Include="Int\MaxProductOfN_In_M_Bits.cs" />
     <Compile Include="Int\Palindrome.cs" />
+    <Compile Include="Int\TowersOfHanoi.cs" />
     <Compile Include="MyHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
