@@ -59,6 +59,8 @@
     <Compile Include="Int\BinarySearch.cs" />
     <Compile Include="Int\MaxProductOfN_In_M_Bits.cs" />
     <Compile Include="Int\Palindrome.cs" />
+    <Compile Include="Int\Search\FirstItemInSortedArray.cs" />
+    <Compile Include="Int\Search\FirstItemLargerThanKeyInSortedArray.cs" />
     <Compile Include="Int\TowersOfHanoi.cs" />
     <Compile Include="MyHelper.cs" />
     <Compile Include="Program.cs" />

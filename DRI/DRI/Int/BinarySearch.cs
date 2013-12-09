@@ -8,7 +8,7 @@ namespace DRI.Int
 {
     class BinarySearch
     {
-        public int Search(int[] a, int key)
+        public static int Search(int[] a, int key)
         {
             int result = -1;
            
