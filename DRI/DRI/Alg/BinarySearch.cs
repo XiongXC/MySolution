@@ -15,7 +15,8 @@ namespace DRI.Alg
 
             while (low <= high)
             {
-                int mid = (low + high) / 2;
+                //don't use (low+high)/2, it may cause overflow.
+                int mid =low + (high-low) / 2;
                 int midVal = a[mid];
 
                 if (midVal < key)

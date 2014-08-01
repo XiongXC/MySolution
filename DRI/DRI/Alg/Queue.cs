@@ -12,15 +12,18 @@ namespace DRI.Alg
         int count;
         T[] arr;
 
-        public Queue() { 
-            arr=new T[size];
-            count=0;
+        public Queue()
+        {
+            arr = new T[size];
+            count = 0;
         }
 
-        public bool Enqueue(T v){
-            if(count==size){
-                T[] temp=new T[arr.Length];
-                Array.Copy(arr, temp,arr.Length);
+        public bool Enqueue(T v)
+        {
+            if (count == size)
+            {
+                T[] temp = new T[arr.Length];
+                Array.Copy(arr, temp, arr.Length);
 
                 arr = new T[2 * arr.Length];
                 Array.Copy(temp, arr, temp.Length);
@@ -31,18 +34,21 @@ namespace DRI.Alg
             return true;
         }
 
-        public T Dequeue() {
+        public T Dequeue()
+        {
             if (count > 0)
-            {  
-                T temp= arr[0];
-                for(int i=0; i<count;){
-                    arr[i]=arr[++i];
+            {
+                T temp = arr[0];
+                for (int i = 0; i < count; )
+                {
+                    arr[i] = arr[++i];
                 }
                 count--;
                 return temp;
             }
 
-            else{
+            else
+            {
                 throw new Exception("Empty Queue");
             }
         }
@@ -53,7 +59,8 @@ namespace DRI.Alg
             return true;
         }
 
-        public int Size() {
+        public int Size()
+        {
             return count;
         }
     }

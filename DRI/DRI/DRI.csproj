@@ -49,6 +49,9 @@
     <Compile Include="Alg\Sort\InsertionSort.cs" />
     <Compile Include="Alg\Sort\SelectionSort.cs" />
     <Compile Include="Alg\Stack.cs" />
+    <Compile Include="Alg\Tree\BinarySearchTree.cs" />
+    <Compile Include="Alg\Tree\BinaryTree.cs" />
+    <Compile Include="Alg\Tree\Tree.cs" />
     <Compile Include="Basics\Ordinary_Array.cs" />
     <Compile Include="Basics\Basic.cs" />
     <Compile Include="Alg\MergeSort.cs" />
@@ -58,6 +61,7 @@
     <Compile Include="Alg\RemoveDuplicatesInArray.cs" />
     <Compile Include="Basics\JaggedArray.cs" />
     <Compile Include="Basics\StringPro.cs" />
+    <Compile Include="Int\ArithmeticExpressionEvaluation.cs" />
     <Compile Include="Int\BinarySearch.cs" />
     <Compile Include="Int\MaxProductOfN_In_M_Bits.cs" />
     <Compile Include="Int\Palindrome.cs" />
