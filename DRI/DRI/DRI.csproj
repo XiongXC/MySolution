@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alg\BinarySearch.cs" />
-    <Compile Include="Alg\BinarySearch2.cs" />
+    <Compile Include="Alg\Search\BinarySearch.cs" />
+    <Compile Include="Alg\Search\BinarySearch2.cs" />
     <Compile Include="Alg\LinkedList.cs" />
     <Compile Include="Alg\Queue.cs" />
     <Compile Include="Alg\ReverseArray180.cs" />
@@ -54,7 +54,7 @@
     <Compile Include="Alg\Tree\Tree.cs" />
     <Compile Include="Basics\Ordinary_Array.cs" />
     <Compile Include="Basics\Basic.cs" />
-    <Compile Include="Alg\MergeSort.cs" />
+    <Compile Include="Alg\Sort\MergeSort.cs" />
     <Compile Include="Alg\QuickFindUnion.cs" />
     <Compile Include="Alg\QuickFindUnionTree.cs" />
     <Compile Include="Alg\QuickFindUnionTreeBalanced.cs" />
