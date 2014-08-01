@@ -16,7 +16,7 @@ namespace DRI
             for (int i = 0; i < n; i++)
             {
                 a[i] = new Random().Next(0, 1000);
-                Thread.Sleep(100);
+                Thread.Sleep(30);
             }
 
             return a;
