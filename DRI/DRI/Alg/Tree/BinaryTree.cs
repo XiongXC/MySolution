@@ -19,27 +19,53 @@ namespace DRI.Alg.Tree
             this.RightTree = RightTree;
         }
 
-        public void ZTranverse(BinaryTree<T> BTree)
+        public static void ZTranverse(BinaryTree<T> BTree)
         {
-            Queue<T> qi=new Queue<T>();
 
-            
+            Stack<BinaryTree<T>> BTreeStack = new Stack<BinaryTree<T>>();
+
+            Queue<BinaryTree<T>> BTreeQueue = new Queue<BinaryTree<T>>();
+
+
+            BTreeStack.Push(BTree);
+
+            BTreeQueue.Enqueue(BTree);
+
+            bool leftFirst=true;
+
+            BTreeStack=Tranverse(BTreeStack,BTreeQueue,ref leftFirst);
+            while (!BTreeStack.IsEmpty()) 
+            {
+                BTreeStack = Tranverse(BTreeStack, BTreeQueue, ref leftFirst);
+            }
 
         }
 
-        private Queue<BinaryTree<T>> Tranverse(BinaryTree<T> BTree, int level) 
+        private static Stack<BinaryTree<T>> Tranverse(Stack<BinaryTree<T>> BTreeStack, Queue<BinaryTree<T>> BTreeQueue, ref bool leftFirst) 
         {            
-            Queue<BinaryTree<T>> qb=new Queue<BinaryTree<T>>();
-            if(BTree != null){
-                qb.Enqueue(BTree);
-                if (level % 2 == 0)
-                {
-                        
+            Stack<BinaryTree<T>> tempStack = new Stack<BinaryTree<T>>();           
 
+            while (!BTreeStack.IsEmpty()) 
+            {
+                BinaryTree<T> bTree = BTreeStack.Pop();
+                
+                if (leftFirst == true)
+                {
+                    if (bTree.LeftTree != null) { tempStack.Push(bTree.LeftTree); BTreeQueue.Enqueue(bTree.LeftTree); }
+                    if (bTree.RightTree != null) { tempStack.Push(bTree.RightTree); BTreeQueue.Enqueue(bTree.RightTree); }
+                }
+                else 
+                {
+                    if (bTree.RightTree != null) { tempStack.Push(bTree.RightTree); BTreeQueue.Enqueue(bTree.RightTree); }   
+                    if (bTree.LeftTree != null) { tempStack.Push(bTree.LeftTree); BTreeQueue.Enqueue(bTree.LeftTree); }                                     
                 }
             }
 
-            return qb;
+            leftFirst = !leftFirst;
+
+            BTreeStack = tempStack;
+
+            return BTreeStack;
         }
         
     }
