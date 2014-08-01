@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Alg\Tree\BinaryTreeTest.cs" />
     <Compile Include="Alg\UnitTest_BinarySearch.cs" />
     <Compile Include="Alg\UnitTestQuickFIndUnion.cs" />
     <Compile Include="Alg\UnitTestRemoveDuplicates.cs" />
