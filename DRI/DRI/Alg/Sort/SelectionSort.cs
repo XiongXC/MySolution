@@ -13,7 +13,8 @@ namespace DRI.Alg.Sort
             for (int i = 0; i < a.Length; i++)
             {
                 int min =a[i];
-                int k = -1;
+                int k = i;
+
                 for (int j = i + 1; j < a.Length; j++)
                 {
                     if (min > a[j]) 
@@ -25,7 +26,6 @@ namespace DRI.Alg.Sort
 
                 a[k] = a[i];
                 a[i] = min;
-
             }
         }
     }

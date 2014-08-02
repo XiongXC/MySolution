@@ -9,7 +9,6 @@ namespace DRI.Alg.Tree
     public class Tree<T>
     {
         Tree<T> Head;
-        LinkedList<Tree<T>> TreeList;
-        
+        LinkedList<Tree<T>> TreeList;        
     }
 }

@@ -14,15 +14,22 @@ namespace DRI.Alg.Sort
             for (int i = 1; i < a.Length; i++) 
             {
                 int k = j;
-                int temp=a[i];
-                while (k >= 0 && a[i] < a[k]) k--;
-                if (k != j)
-                {
-                    Shift(a, k+1, j);
-                    a[k + 1] = temp;
-                }
 
-                j++;
+                if (a[i] >= a[k]) j++;
+                else
+                {
+                    int temp = a[i];
+
+                    while (k >= 0 && a[i] < a[k]) k--;
+
+                    if (k != j)
+                    {
+                        Shift(a, k + 1, j);
+                        a[k + 1] = temp;
+                    }
+
+                    j++;
+                }
             }
         }
 
