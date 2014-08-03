@@ -8,7 +8,7 @@ namespace DRI.Alg.Sort
 {
     public class SelectionSort
     {
-        public void Sort(int[] a)
+        public static void Sort(int[] a)
         {
             for (int i = 0; i < a.Length; i++)
             {

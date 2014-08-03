@@ -47,6 +47,7 @@
     <Compile Include="Alg\Queue.cs" />
     <Compile Include="Alg\ReverseArray180.cs" />
     <Compile Include="Alg\Sort\InsertionSort.cs" />
+    <Compile Include="Alg\Sort\QuickSort.cs" />
     <Compile Include="Alg\Sort\SelectionSort.cs" />
     <Compile Include="Alg\Stack.cs" />
     <Compile Include="Alg\Tree\BinarySearchTree.cs" />

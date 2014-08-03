@@ -10,6 +10,9 @@ namespace UnitTestDRI.Alg.Sort
     public class SortTest
     {
         LinkedList<int[]> arrList;
+
+        public delegate void SortDelegate(int[] a);
+
         /// <summary>
         ///Initialize() is called once during test execution before
         ///test methods in this test class are executed.
@@ -17,18 +20,19 @@ namespace UnitTestDRI.Alg.Sort
         [TestInitialize()]
         public void Initialize()
         {
+            arrList = new LinkedList<int[]>();
+
             int arrNo=5;
 
             for (int i = 0; i < arrNo; i++) 
             {
-                int arrLength = new Random().Next(0, 100);
+                int arrLength = new Random().Next(0, 2000);
                 int[] a = MyHelper.CreateArray(arrLength);
                 arrList.AddLast(a);
             }          
         }
-
-        [TestMethod]
-        public void Sort(Delegate sortMethod)
+        
+        public void Sort(SortDelegate sortMethod)
         {            
             bool sorted = true;
             foreach (int[] a in arrList)
@@ -42,7 +46,7 @@ namespace UnitTestDRI.Alg.Sort
 
                 Array.Sort(b);
 
-                InsertionSort.Sort(a);                
+                sortMethod(a);                
 
                 for (int i = 0; i < a.Length; i++)
                 {
@@ -56,11 +60,23 @@ namespace UnitTestDRI.Alg.Sort
         [TestMethod]
         public void InsertSort()
         {
-            SortMethod sm=new SortMethod();
-            Sort()
+            SortDelegate sd= InsertionSort.Sort;
+            Sort(sd);
         }
 
-        public delegate void SortMethod(int[] a);
+        [TestMethod]
+        public void SelectSort()
+        {
+            SortDelegate sd = SelectionSort.Sort;
+            Sort(sd);
+        }
+
+        [TestMethod]
+        public void Quick_Sort()
+        {
+            SortDelegate sd =QuickSort.Sort;
+            Sort(sd);
+        }       
 
 
     }
