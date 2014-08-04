@@ -8,34 +8,38 @@ namespace DRI.Alg.Sort
 {
     public class InsertionSort
     {
-        public static void Sort(int[] a) 
+        public static void Sort(int[] a)
         {
-            int j = 0;
-            for (int i = 1; i < a.Length; i++) 
+            int j = 0;// the last index of sorted group
+            for (int i = 1; i < a.Length; i++)
             {
-                int k = j;
+                int k = j;// to track the index to insert
 
-                if (a[i] >= a[k]) j++;
+                //if current one is bigger, increase the last indes of the sorted group
+                if (a[i] >= a[k])
+                {
+                    j++;
+                }
+
+                //try to find the right place to insert
                 else
                 {
                     int temp = a[i];
 
-                    while (k >= 0 && a[i] < a[k]) k--;
+                    while (k >= 0 && a[i] < a[k]) k--;//find it, but point to the place before the right place
 
-                    if (k != j)
-                    {
-                        Shift(a, k + 1, j);
-                        a[k + 1] = temp;
-                    }
+                    // shift the sorted group to insert the founded one
+                    Shift(a, k + 1, j);
+                    a[k + 1] = temp;
 
-                    j++;
+                    j++;// increase the last index of the sorted group
                 }
             }
         }
 
-        static void Shift(int[] a, int i, int j) 
+        static void Shift(int[] a, int i, int j)
         {
-            for (int k =j+1; k >i; k--) 
+            for (int k = j + 1; k > i; k--)
             {
                 a[k] = a[k - 1];
             }

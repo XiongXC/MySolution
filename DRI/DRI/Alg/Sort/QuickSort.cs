@@ -32,7 +32,10 @@ namespace DRI.Alg.Sort
         /* 
          * 3-way partition
          * 
-        * P: equal group start index 
+         * P: start index of equal group; p-1, end index of the less group
+         * l: start index of unknow group
+         * high: start index of greater group, from bigger to smaller
+         * 
         */
         private static int Partition(int[] a, int p, ref int l, int high)
         {           
@@ -40,19 +43,20 @@ namespace DRI.Alg.Sort
             int h = high;//unknow right pointer
             while (l <= h)
             {
+                //less than the pivot value, swap the first one in pivoted group with the current one
                 if (a[l] < a[p])
                 {
                     Swap(a, l, p);
-                    l++;
-                    p++;
+                    l++;//move to the next unknown one
+                    p++;// increase the pivoted group startIndex
                 }
-
+                //greater than the pivot value, move the greater one to the greater group
                 else if (a[l] > a[p])
                 {
                     Swap(a, l, h);                    
-                    h--;
+                    h--;//decrease the greater group startIndex, make it bigger
                 }
-                // move unknown pointer to next
+                // equal to the pivoted value, move unknown pointer to next
                 else l++;                
             }
 
