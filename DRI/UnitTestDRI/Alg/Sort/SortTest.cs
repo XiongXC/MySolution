@@ -26,7 +26,7 @@ namespace UnitTestDRI.Alg.Sort
 
             for (int i = 0; i < arrNo; i++) 
             {
-                int arrLength = new Random().Next(0, 100);
+                int arrLength = new Random().Next(0, 20);
                 int[] a = MyHelper.CreateArray(arrLength);
                 arrList.AddLast(a);
             }          
@@ -83,7 +83,13 @@ namespace UnitTestDRI.Alg.Sort
         {
             SortDelegate sd = MergeSort.Sort;
             Sort(sd);
-        }       
+        }
 
+        [TestMethod]
+        public void Counting_Sort()
+        {
+            SortDelegate sd = CountingSort.Sort;
+            Sort(sd);
+        }       
     }
 }

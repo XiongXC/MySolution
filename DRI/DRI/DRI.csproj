@@ -46,6 +46,7 @@
     <Compile Include="Alg\LinkedList.cs" />
     <Compile Include="Alg\Queue.cs" />
     <Compile Include="Alg\ReverseArray180.cs" />
+    <Compile Include="Alg\Sort\CountingSort.cs" />
     <Compile Include="Alg\Sort\InsertionSort.cs" />
     <Compile Include="Alg\Sort\QuickSort.cs" />
     <Compile Include="Alg\Sort\SelectionSort.cs" />
