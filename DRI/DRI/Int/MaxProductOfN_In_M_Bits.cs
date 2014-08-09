@@ -28,7 +28,7 @@ namespace DRI.Int
             return hasMaxNo;
         }
 
-        public static bool Availabel_MaxProduct(int bits, int no, int[] range)
+        public static bool Available_MaxProduct(int bits, int no, int[] range)
         {
             bool hasMaxNo = false;
 

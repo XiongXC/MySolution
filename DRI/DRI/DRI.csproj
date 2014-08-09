@@ -53,6 +53,7 @@
     <Compile Include="Alg\Stack.cs" />
     <Compile Include="Alg\Tree\BinarySearchTree.cs" />
     <Compile Include="Alg\Tree\BinaryTree.cs" />
+    <Compile Include="Alg\Tree\Heap.cs" />
     <Compile Include="Alg\Tree\Tree.cs" />
     <Compile Include="Basics\Ordinary_Array.cs" />
     <Compile Include="Basics\Basic.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="Basics\JaggedArray.cs" />
     <Compile Include="Basics\StringPro.cs" />
     <Compile Include="Int\ArithmeticExpressionEvaluation.cs" />
+    <Compile Include="Int\Arrays\MaxProductOf_3_Elements.cs" />
+    <Compile Include="Int\Arrays\Top_N_Element.cs" />
     <Compile Include="Int\BinarySearch.cs" />
     <Compile Include="Int\MaxProductOfN_In_M_Bits.cs" />
     <Compile Include="Int\Palindrome.cs" />
@@ -76,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Int\Tree\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
