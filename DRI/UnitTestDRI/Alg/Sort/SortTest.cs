@@ -26,7 +26,7 @@ namespace UnitTestDRI.Alg.Sort
 
             for (int i = 0; i < arrNo; i++) 
             {
-                int arrLength = new Random().Next(0, 20);
+                int arrLength = new Random().Next(0, 1000);
                 int[] a = MyHelper.CreateArray(arrLength);
                 arrList.AddLast(a);
             }          
