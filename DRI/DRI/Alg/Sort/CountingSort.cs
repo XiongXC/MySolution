@@ -10,6 +10,8 @@ namespace DRI.Alg.Sort
     { 
         public static void Sort(int[] a)
         {
+            if (a.Length <= 1) return;
+
             int min = a[0];
             int max = a[0];
 
@@ -38,13 +40,14 @@ namespace DRI.Alg.Sort
 
             int[] c=new int[a.Length];
 
-            for(int k=0; k<b.Length;k++)
+            for(int k=a.Length-1; k>=0;k--)
             {
-                for (int j = 0; j < b[k]; j++)
-                {
-                    c[b[k]+j] = a[k];
-                }
-            }
+               
+               c[--b[a[k]]] = a[k]+min;
+               
+            }           
+
+            Array.Copy(c, a,c.Length);
 
         }
     }
