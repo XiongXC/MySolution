@@ -53,6 +53,7 @@
     <Compile Include="Alg\Stack.cs" />
     <Compile Include="Alg\Tree\BinarySearchTree.cs" />
     <Compile Include="Alg\Tree\BinaryTree.cs" />
+    <Compile Include="Alg\Tree\BinaryTreeInArray.cs" />
     <Compile Include="Alg\Tree\Heap.cs" />
     <Compile Include="Alg\Tree\Tree.cs" />
     <Compile Include="Basics\Ordinary_Array.cs" />

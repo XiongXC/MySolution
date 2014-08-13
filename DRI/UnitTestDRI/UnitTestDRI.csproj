@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Alg\Sort\SortTest.cs" />
     <Compile Include="Alg\Tree\BinaryTreeTest.cs" />
+    <Compile Include="Alg\Tree\BinaryTreeInArrayTest.cs" />
     <Compile Include="Alg\UnitTest_BinarySearch.cs" />
     <Compile Include="Alg\UnitTestQuickFIndUnion.cs" />
     <Compile Include="Alg\UnitTestRemoveDuplicates.cs" />

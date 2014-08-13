@@ -55,8 +55,8 @@ namespace DRI.Alg
 
         public bool IsEmpty()
         {
-            if (count == 0) return false;
-            return true;
+            if (count == 0) return true;
+            return false;
         }
 
         public int Size()
